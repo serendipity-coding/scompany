@@ -17,11 +17,13 @@ List the ready features here:
 
 ## Setup
 
-for the backend
-make sure to add linkedin account credentials in companies.js in the controllers folder
-run 'npm i'
-'nodemon server'
+for the backend:
 
-for the frontend
-run 'npm i'
-'nodemon server'
+- make sure to add linkedin account credentials in companies.js in the controllers folder
+- run 'npm i'
+- 'nodemon server'
+
+for the frontend:
+
+- run 'npm i'
+- 'nodemon server'
