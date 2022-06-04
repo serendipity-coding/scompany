@@ -17,12 +17,8 @@ exports.getScrappedCompanies = async (req, res, next) => {
       .wait(until.elementLocated(By.css('.main__sign-in-link')))
       .click();
 
-    await driver
-      .wait(until.elementLocated(By.id('username')))
-      .sendKeys(process.evn.LINKEDIN_EMAIL);
-    await driver
-      .wait(until.elementLocated(By.id('password')))
-      .sendKeys(process.evn.LINKEDIN_PASSWORD);
+    await driver.wait(until.elementLocated(By.id('username'))).sendKeys(''); //add linkedin email
+    await driver.wait(until.elementLocated(By.id('password'))).sendKeys(''); //add linkedin password
     await driver
       .wait(
         until.elementLocated(By.css("[data-litms-control-urn='login-submit']"))
