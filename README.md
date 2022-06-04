@@ -19,7 +19,7 @@ List the ready features here:
 
 for the backend:
 
-- make sure to add linkedin account credentials in companies.js in the controllers folder
+- make sure to add linkedin account credentials in infos.js folder
 - run 'npm i'
 - 'nodemon server'
 
