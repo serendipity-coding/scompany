@@ -1,6 +1,7 @@
 const { Builder, By, until } = require('selenium-webdriver');
 require('chromedriver');
 const uniqid = require('uniqid');
+const { email, password } = require('../infos');
 
 // @desc Get scrapped companies
 // @route GET /api/v1/companies
@@ -17,8 +18,10 @@ exports.getScrappedCompanies = async (req, res, next) => {
       .wait(until.elementLocated(By.css('.main__sign-in-link')))
       .click();
 
-    await driver.wait(until.elementLocated(By.id('username'))).sendKeys(''); //add linkedin email
-    await driver.wait(until.elementLocated(By.id('password'))).sendKeys(''); //add linkedin password
+    await driver.wait(until.elementLocated(By.id('username'))).sendKeys(email); //add linkedin email
+    await driver
+      .wait(until.elementLocated(By.id('password')))
+      .sendKeys(password); //add linkedin password
     await driver
       .wait(
         until.elementLocated(By.css("[data-litms-control-urn='login-submit']"))
