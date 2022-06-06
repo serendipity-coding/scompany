@@ -79,6 +79,7 @@ exports.getScrappedCompanies = async (req, res, next) => {
       await driver.quit();
       res.status(200).json({ success: true, company });
     }
+    return res.status(404).json({ message: 'Aucune entreprise trouvée' });
   } catch (error) {
     res.status(error.status || 500).json({
       success: false,
