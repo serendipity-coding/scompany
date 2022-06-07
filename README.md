@@ -23,7 +23,4 @@ for the backend:
 - run 'npm i'
 - 'nodemon server'
 
-for the frontend:
-
-- run 'npm i'
-- 'nodemon server'
+for the frontend: .
